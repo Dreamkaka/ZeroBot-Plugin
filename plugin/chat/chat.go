@@ -36,7 +36,7 @@ func init() { // 插件主体
 					"(っ●ω●)っ在~",
 					"这里是" + nickname + "(っ●ω●)っ",
 					nickname + "不在",
-     "好烦啊，找" + nickname "干嘛啊......",
+     "好烦啊，找" + nickname "干嘛啊?",
      "不要找我捏",
      "找" + nickname + "有什么事吗"
 				}[rand.Intn(7)],
