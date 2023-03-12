@@ -1,4 +1,6 @@
 // Package chat 对话插件
+//残月的生命只有短短的114行代码，我要给她完整的一生。
+//小寒寒你怎么睡得着觉的，还不快点写--残月tk
 package chat
 
 import (
@@ -34,7 +36,9 @@ func init() { // 插件主体
 					"(っ●ω●)っ在~",
 					"这里是" + nickname + "(っ●ω●)っ",
 					nickname + "不在呢~",
-				}[rand.Intn(4)],
+     "好烦啊，找" + nickname "干嘛啊......"
+     "不要找我捏"
+				}[rand.Intn(6)],
 			))
 		})
 	// 戳一戳
@@ -50,6 +54,9 @@ func init() { // 插件主体
 				// 5分钟共8块命令牌 一次消耗1块命令牌
 				time.Sleep(time.Second * 1)
 				ctx.SendChain(message.Text("喂(#`O′) 戳", nickname, "干嘛！"))
+   case poke.Load(ctx.Event,GroupID).Acquire(2): //这个是两块
+   time.sleep(time.second * 1)
+    ctx.SendChain(message.Text("不要再戳”, nickname, "很烦哎QAQ"))
 			default:
 				// 频繁触发，不回复
 			}
