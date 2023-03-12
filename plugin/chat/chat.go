@@ -35,10 +35,11 @@ func init() { // 插件主体
 					nickname + "在此，有何贵干~",
 					"(っ●ω●)っ在~",
 					"这里是" + nickname + "(っ●ω●)っ",
-					nickname + "不在呢~",
-     "好烦啊，找" + nickname "干嘛啊......"
-     "不要找我捏"
-				}[rand.Intn(6)],
+					nickname + "不在",
+     "好烦啊，找" + nickname "干嘛啊......",
+     "不要找我捏",
+     "找" + nickname + "有什么事吗"
+				}[rand.Intn(7)],
 			))
 		})
 	// 戳一戳
@@ -56,7 +57,10 @@ func init() { // 插件主体
 				ctx.SendChain(message.Text("喂(#`O′) 戳", nickname, "干嘛！"))
    case poke.Load(ctx.Event,GroupID).Acquire(2): //这个是两块
    time.sleep(time.second * 1)
-    ctx.SendChain(message.Text("不要再戳”, nickname, "很烦哎QAQ"))
+    ctx.SendChain(message.Text("不要再戳”, nickname, "有意思吗。。。。。。"))
+   case poke.Load(ctx.Event,GroupID).Acquire(3): //这个是两块
+   time.sleep(time.second * 1)
+    ctx.SendChain(message.Text("别tm戳了！（举枪）"))
 			default:
 				// 频繁触发，不回复
 			}
